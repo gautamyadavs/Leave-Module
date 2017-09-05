@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="{% static 'leave/assets/images/basic3-154-infinity-512x512.png' %}" type="image/x-icon">
+  <meta name="description" content="">
+  <title>viewleaves</title>
+  <link rel="stylesheet" href="{% static 'leave/assets/web/assets/mobirise-icons/mobirise-icons.css' %}">
+  <link rel="stylesheet" href="{% static 'leave/assets/tether/tether.min.css' %}">
+  <link rel="stylesheet" href="{% static 'leave/assets/bootstrap/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'leave/assets/bootstrap/css/bootstrap-grid.min.css' %}">
+  <link rel="stylesheet" href="{% static 'leave/assets/bootstrap/css/bootstrap-reboot.min.css' %}">
+  <link rel="stylesheet" href="{% static 'leave/assets/dropdown/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'leave/assets/socicon/css/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'leave/assets/theme/css/style.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+  <link href="{% static 'leave/assets/fonts/style.css' %}" rel="stylesheet">
+  <link href="{% static 'leave/assets/mobirise/css/mbr-additional.css' %}" rel="stylesheet">
+
+
+</head>
+<body>
+<section class="menu cid-qtm9HUX9Jb" once="menu" id="menu1-27" data-rv-view="165">
+
+
+
+    <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm bg-color transparent">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+        <div class="menu-logo">
+            <div class="navbar-brand">
+                <span class="navbar-logo">
+                    <a href=" ">
+                         <img src="{% static 'leave/assets/images/basic3-154-infinity-512x512.png' %}" alt="" title="" media-simple="true" style="height: 4.3rem;">
+                    </a>
+                </span>
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4" href=" "></a></span>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-white display-4" href="#"></a></li><li class="nav-item">
+                    <a class="nav-link link text-white display-4" href="/home/">&nbsp;Dashboard</a>
+                </li><li class="nav-item"><a class="nav-link link text-white display-4" href="#"><span class="socicon socicon-ello mbr-iconfont mbr-iconfont-btn" style="color: rgb(255, 255, 255);"></span>
+                        {{username}}</a></li><li class="nav-item"><a class="nav-link link text-white display-4" href="/home/loggedout/">{% csrf_token %}<span class="mbri-login mbr-iconfont mbr-iconfont-btn" style="color: rgb(255, 255, 255);"></span>Logout&nbsp;</a></li></ul>
+
+        </div>
+    </nav>
+</section>
+
+<section class="header5 cid-qtygdLAOfA" id="header5-29" data-rv-view="160">
+
+
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="mbr-white col-md-10">
+                <h1 class="mbr-section-title align-center pb-3 mbr-fonts-style display-1">Your Leaves</h1>
+
+
+            </div>
+        </div>
+    </div>
+
+
+</section>
+{% if leaves %}
+<section class="mbr-section content4 cid-qtyiAlqpdJ" id="content4-2f" data-rv-view="169" style="background-color: white">
+
+
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="title col-12 col-md-8">
+
+                <h2 class="align-center pb-3 mbr-fonts-style display-2">Leaves On-hold</h2>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
+<section class="row-section" style="background:#fff">
+
+<style>
+.row-section h2{float:left; width:100%; color:#fff; margin-bottom:30px; font-size: 14px;}
+.row-section h2 span{font-family: 'Kumar One', cursive; display:block; font-size:45px; text-transform:none; margin-bottom:20px; margin-top:30px;}
+.row-section h2 a{color:#fff;}
+.row-section .row-block{background:#fff; padding:20px; margin-bottom:0px;}
+.row-section .row-block ul{margin:0; padding:0;}
+.row-section .row-block ul li{list-style:none; margin-bottom:20px;}
+.row-section .row-block ul li:last-child{margin-bottom:0;}
+.row-section .row-block ul li:hover{cursor:grabbing;}
+.row-section .row-block .media{border:0px solid #635a51; padding:5px 20px; border-radius: 5px; box-shadow:2px 6px 6px rgba(30,30,30,0.4); background:#635a51;}
+.row-section .media .media-left img{width:75px;}
+.row-section .media .media-body p{padding: 0 15px; font-size:14px; color: #fff}
+.row-section .media .media-body h4 {color: #fff; font-size: 18px; font-weight: 600; margin-bottom: 0; padding-left: 14px; margin-top:12px;}
+.btn-default{background:#635a51; color:#fff; border-radius:30px; border:2px solid #fff; font-size:16px;}
+</style>
+    <div class="container">
+      {% for leave in leaves %}
+	    <div class="col-md-10 offset-md-1 row-block">
+	        <ul id="sortable">
+	            <li><div class="media">
+	            <div class="media-body">
+                <br>
+                <p>Start Date: {{leave.start_date}}
+                  <br>
+                  End Date:  {{leave.end_date}}
+                  <br>
+                  Leave Type : {{leave.leavetype}}
+                  <br>
+                  Processing By: {{leave.processing_status}}
+                </p>
+	            </div>
+	            <div class="media-right align-self-center">
+                <form class="form-horizontal" action="/home/deleteleave/" method="post">
+                  {% csrf_token %}
+                  <button id="deleteleave" name="deleteleave" type="submit" class="btn btn-default" style="border:2px solid #fff;" value={{leave.id}}>Cancel</button>
+                </form>
+	            </div>
+	        </div></li>
+	        </ul>
+	    </div>
+      {% endfor %}
+</div>
+</section>
+{% if past_leaves %}
+<section class="mbr-section content4 cid-qtyi7jvYV9" id="content4-2d" data-rv-view="163" style="background-color: white">
+
+
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="title col-12 col-md-8">
+                <h2 class="align-center pb-3 mbr-fonts-style display-2">Past Leaves</h2>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
+<section class="row-section" style="background:#fff">
+
+<style>
+.row-section h2{float:left; width:100%; color:#fff; margin-bottom:30px; font-size: 14px;}
+.row-section h2 span{font-family: 'Kumar One', cursive; display:block; font-size:45px; text-transform:none; margin-bottom:20px; margin-top:30px;}
+.row-section h2 a{color:#fff;}
+.row-section .row-block{background:#fff; padding:20px; margin-bottom:0px;}
+.row-section .row-block ul{margin:0; padding:0;}
+.row-section .row-block ul li{list-style:none; margin-bottom:20px;}
+.row-section .row-block ul li:last-child{margin-bottom:0;}
+.row-section .row-block ul li:hover{cursor:grabbing;}
+.row-section .row-block .media{border:0px solid #635a51; padding:5px 20px; border-radius: 5px; box-shadow:2px 6px 6px rgba(30,30,30,0.4); background:#635a51;}
+.row-section .media .media-left img{width:75px;}
+.row-section .media .media-body p{padding: 0 15px; font-size:14px; color: #fff}
+.row-section .media .media-body h4 {color: #fff; font-size: 18px; font-weight: 600; margin-bottom: 0; padding-left: 14px; margin-top:12px;}
+.btn-default{background:#635a51; color:#fff; border-radius:30px; border:0px solid #fff; font-size:16px;}
+</style>
+
+    <div class="container">
+      {% for leave in past_leaves %}
+      <div class="col-md-10 offset-md-1 row-block">
+	        <ul id="sortable">
+	            <li><div class="media">
+	            <div class="media-body">
+                <br>
+                <p>Start Date: {{leave.start_date}}
+                  <br>
+                  End Date:  {{leave.end_date}}
+                  <br>
+                  Leave Type : {{leave.leavetype}}
+                  <br>
+                  Processing By: {{leave.processing_status}}
+                </p>
+	            </div>
+	            <div class="media-right align-self-center">
+                {% if leave.application_status == "accepted" %}
+                <a class="btn btn-default" style="background:#27d683;">Approved</a>
+                {% else %}
+                <form class="form-horizontal" action="/home/leavereject/" method="post">
+                {% csrf_token %}
+                <button id="submitleave" name="submitleave" type="submit" value={{leave.id}} class="btn btn-default" style="background:#ef4566;">Declined</button>
+                </form>
+                {% endif %}
+	            </div>
+	        </div></li>
+	        </ul>
+	    </div>
+      {% endfor %}
+      <div class="row"><br><br><br></div>
+</div>
+</section>
+
+
+<div class="row"><br><br><br></div>
+<section once="" class="cid-qtmfWV5aem" id="footer6-18" data-rv-view="189" style="position: absolute; width: 100%; bottom:0">
+
+    <div class="container">
+        <div class="media-container-row align-center mbr-white">
+            <div class="col-12">
+                <p class="mbr-text mb-0 mbr-fonts-style display-7">
+                    © Copyright 2017 - IIITDMJ&nbsp;</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  <script src="{% static 'leave/assets/web/assets/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'leave/assets/popper/popper.min.js' %}"></script>
+  <script src="{% static 'leave/assets/tether/tether.min.js' %}"></script>
+  <script src="{% static 'leave/assets/bootstrap/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'leave/assets/smooth-scroll/smooth-scroll.js' %}"></script>
+  <script src="{% static 'leave/assets/dropdown/js/script.min.js' %}"></script>
+  <script src="{% static 'leave/assets/touch-swipe/jquery.touch-swipe.min.js' %}"></script>
+  <script src="{% static 'leave/assets/theme/js/script.js' %}"></script>
+
+
+</body>
+</html>
