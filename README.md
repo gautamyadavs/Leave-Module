@@ -1,6 +1,6 @@
 # Leave-Module
 A module which is going to be incorporated in larger Software Product.
-This mainly deals with the leave applications and the relavant processes mainly focused on Academic Institutions.
+This mainly deals with the leave applications and the relevant processes mainly focused on Academic Institutions.
 Requires python3.5+ and django==1.11.4+
 
 TO USE
