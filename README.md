@@ -3,6 +3,11 @@ A module which is going to be incorporated in larger Software Product.
 This mainly deals with the leave applications and the relevant processes mainly focused on Academic Institutions.
 Requires python3.5+ and django==1.11.4+
 
+DESIGNED BY
+FrontEnd and Documentation: Arpit Jain<BR>
+BackEnd and Database: Gautam Yadav<BR>
+
+
 TO USE
 
 Install virtualenv pip install virtualenv<BR>
